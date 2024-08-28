@@ -1,9 +1,9 @@
 <div class="cards-container">
     @for (char of characters; track $index) {
     <mat-card class="card" appearance="outlined">
-        <mat-card-header>
+        <mat-card-header class="card-header">
             <div mat-card-avatar class="header-image"></div>
-            <mat-card-title>{{ char.fullName }}</mat-card-title>
+            <mat-card-title class="card-title">{{ char.fullName }}</mat-card-title>
             <mat-card-subtitle>{{char.family }}</mat-card-subtitle>
         </mat-card-header>
         <img class="card-image" mat-card-image src="{{char.imageUrl}}" alt="Photo of {{char.firstName}}">
@@ -11,8 +11,8 @@
             <p>{{char.title}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
+            <button mat-button class="action-button">LIKE</button>
+            <button mat-button class="action-button">SHARE</button>
         </mat-card-actions>
     </mat-card>
     }

@@ -9,6 +9,11 @@
     justify-content: center;
     scroll-behavior: smooth;
     gap: 10px;
+
+    .mat-mdc-card-content {
+        display: block;
+        padding: 16px 8px 0;
+    }
 }
 .loading {
     width: 100%;
@@ -27,6 +32,22 @@
 }
 .card {
     max-width: 220px;
+
+    .card-header {
+        display: flex;
+        align-items: center;
+
+        .card-title {
+            font-size: 0.9rem;
+            padding: 0;
+            padding-left: 8px;
+        }
+    }
+
+    .action-button {
+        position: relative;
+        right: 14px;
+    }
 } 
 .header-image {
     background-image: url(/assets/images/thumb-150-188935.jpg);
