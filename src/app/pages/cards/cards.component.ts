@@ -13,4 +13,33 @@ import { ICharacter } from '../../models/models';
 })
 export class CardsComponent {
   @Input() characters!: ICharacter[];
+  paginatedCharacters: any[] = [];
+  @Input() pageSize = 10;
+  currentPage = 1;
+  totalPages = 0;
+
+  ngOnInit(): void {
+    this.totalPages = Math.ceil(this.characters.length / this.pageSize);
+    this.paginateItems();
+  }
+
+  paginateItems(): void {
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    this.paginatedCharacters = this.characters.slice(startIndex, endIndex);
+  }
+
+  goToPage(page: number): void {
+    if (page < 1 || page > this.totalPages) return;
+    this.currentPage = page;
+    this.paginateItems();
+  }
+
+  nextPage(): void {
+    this.goToPage(this.currentPage + 1);
+  }
+
+  previousPage(): void {
+    this.goToPage(this.currentPage - 1);
+  }
 }

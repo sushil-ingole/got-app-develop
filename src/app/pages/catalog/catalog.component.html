@@ -1,17 +1,20 @@
 
-@if(loading){
-    <div class="loading">
-        <h1>
-            Dracarys  !
-        </h1>
-        <mat-progress-spinner 
-            mode="indeterminate"
-            color="warn">
-        </mat-progress-spinner>
-    </div>
-}
+<div class="catalog">
+  @if(loading){
+      <div class="loading">
+          <h1>
+              Dracarys  !
+          </h1>
+          <mat-progress-spinner 
+              mode="indeterminate"
+              color="warn">
+          </mat-progress-spinner>
+      </div>
+  }
+  
+  @if (!loading) {
+      <app-card [characters]="characters" [pageSize]="2"></app-card>
+  }
+</div>
 
-@if (!loading) {
-    <app-card [characters]="characters"></app-card>
-}
 

@@ -1,5 +1,5 @@
 <div class="cards-container">
-    @for (char of characters; track $index) {
+    @for (char of paginatedCharacters; track $index) {
     <mat-card class="card" appearance="outlined">
         <mat-card-header class="card-header">
             <div mat-card-avatar class="header-image"></div>
@@ -16,4 +16,10 @@
         </mat-card-actions>
     </mat-card>
     }
+
+</div>
+<div class="pagination-controls">
+    <button class="btn btn-sm btn-primary" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span class="page-text">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-sm btn-primary" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
 </div>

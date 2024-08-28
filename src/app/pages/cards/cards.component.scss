@@ -1,6 +1,6 @@
 .cards-container {
     width: 100%;
-    height: 80dvh;
+    height: 75dvh;
     overflow-y: scroll;
     display: flex;
     flex-direction: row;
@@ -14,47 +14,67 @@
         display: block;
         padding: 16px 8px 0;
     }
-}
-.loading {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.mat-mdc-card-outlined {
-    border-width: var(--mdc-outlined-card-outline-width);
-    border-style: solid;
-    border-color: var(--mdc-outlined-card-outline-color);
-    border-radius: var(--mdc-outlined-card-container-shape);
-    box-shadow: var(--mdc-outlined-card-container-elevation);
-    background-color: #000000fd;
-}
-.card {
-    max-width: 220px;
 
-    .card-header {
+    .loading {
+        width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-
-        .card-title {
-            font-size: 0.9rem;
-            padding: 0;
-            padding-left: 8px;
+        justify-content: center;
+    }
+    
+    .mat-mdc-card-outlined {
+        border-width: var(--mdc-outlined-card-outline-width);
+        border-style: solid;
+        border-color: var(--mdc-outlined-card-outline-color);
+        border-radius: var(--mdc-outlined-card-container-shape);
+        box-shadow: var(--mdc-outlined-card-container-elevation);
+        background-color: #000000fd;
+    }
+    
+    .card {
+        width: 220px;
+        height: auto;
+    
+        .card-header {
+            display: flex;
+            align-items: center;
+    
+            .card-title {
+                font-size: 0.9rem;
+                padding: 0;
+                padding-left: 8px;
+            }
+        }
+    
+        .action-button {
+            position: relative;
+            right: 14px;
         }
     }
-
-    .action-button {
-        position: relative;
-        right: 14px;
+    
+    .header-image {
+        background-image: url(/assets/images/thumb-150-188935.jpg);
+        background-size: cover;
     }
-} 
-.header-image {
-    background-image: url(/assets/images/thumb-150-188935.jpg);
-    background-size: cover;
+    
+    .card>img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
 }
-.card > img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .page-text {
+        font-size: 1rem;
+    }
+
+    button {
+        margin: 0 1rem;
+    }
 }
