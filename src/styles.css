@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --background-color: black;
+    --main-font-color: whitesmoke;
+}
+
+html, body { height: 100%; }
+body { 
+    box-sizing: border-box; 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: var(--background-color);
+    color: var(--main-font-color);
+}
+.mat-mdc-button:not(:disabled) {
+    color: rgb(255, 0, 38) !important;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: gainsboro;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 50px;
+}
