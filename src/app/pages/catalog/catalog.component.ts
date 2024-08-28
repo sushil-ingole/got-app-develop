@@ -4,11 +4,12 @@ import { ICharacter } from '../../models/models';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { CardsComponent } from '../cards/cards.component';
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [MatProgressSpinnerModule, MatCardModule, MatButtonModule],
+  imports: [MatProgressSpinnerModule, MatCardModule, MatButtonModule, CardsComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss'
 })
